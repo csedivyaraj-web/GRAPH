@@ -3,6 +3,10 @@
 using namespace std;
 
 
+//sc:: O(3V) = O(V)
+//tc :: Undirected :: O(V + 2E)
+//directed :: O(V + E)
+
 class Solution {
 	public:
 	
