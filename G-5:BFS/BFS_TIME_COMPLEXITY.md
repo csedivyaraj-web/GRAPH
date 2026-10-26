@@ -60,17 +60,25 @@ Here, the inner loop is **not** "V times for every node". Each node only checks 
 
 Writing "outer loop V times × inner loop up to V times = O(V²)" is a valid upper bound, but it is loose. It pretends every node is as busy as the busiest possible node.
 
-## Example
+## Directed vs Undirected Graphs
 
-A graph with 4 nodes whose neighbor counts are `2, 1, 3, 2`:
+The only difference is how many times each edge appears in the adjacency lists.
 
-| Part | Work |
-|------|------|
-| Outer loop | 4 iterations (V = 4) |
-| Inner loop (all nodes combined) | 2 + 1 + 3 + 2 = 8 iterations (this is E) |
-| **Total** | **4 + 8 = 12 steps** |
+### Directed graph
 
-The loose multiplication bound would give V × V = 16. That is more than the real work, and the gap grows quickly on large sparse graphs.
+An edge `u → v` is stored once, in `adj[u]` only.
+
+- Sum of all list lengths = **E**
+- Total time = V + E = **O(V + E)**
+
+### Undirected graph
+
+An edge `u - v` is stored twice, in `adj[u]` and in `adj[v]`.
+
+- Sum of all list lengths = sum of degrees = **2E**
+- Total time = V + 2E = **O(V + E)**
+
+The 2 is a constant and Big-O drops constants, so the result is still **O(V + E)** in both cases.
 
 ## Analogy
 
