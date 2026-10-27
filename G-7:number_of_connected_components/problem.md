@@ -14,5 +14,5 @@ Given an undirected graph represented by an adjacency matrix, count the number o
 Every isolated vertex is also its own province.
 
 ## complexity
-time -> O(V)
+time -> O(VE + V)
 space -> O(V)
