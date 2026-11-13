@@ -1,5 +1,6 @@
 #include <iostream>
-#include <vector> 
+#include <utility>
+#include <vector>
 using namespace std;
 //tc ::O(m);
 //space :: O(2*E) undirected O(E)
@@ -8,7 +9,7 @@ int main() {
     int m , n;
     cin >> n >> m;
 
-    vector<pair<int , int>> adj_list[n+1];
+    vector<vector<pair<int, int>>> adj_list(n + 1);
 
     for (int i = 0; i < m; i++)
     {

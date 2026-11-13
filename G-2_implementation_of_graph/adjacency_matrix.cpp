@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
 //tc O(m) :: to store the graph in adj_matrix
@@ -9,7 +10,7 @@ int main() {
     int n,m;
     cin >> n >> m;
 
-    int adj[n+1][n+1];
+    vector<vector<int>> adj(n + 1, vector<int>(n + 1));
     for (int i = 0; i < m; i++)
     {
         int u , v , weight;
