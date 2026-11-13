@@ -1,0 +1,18 @@
+# VS Code
+.vscode/
+
+# executables
+*.exe
+*.out
+*.o
+*.obj
+
+# build folders
+build/
+bin/
+
+# temporary
+*.log
+
+# linux compiled
+a.out
