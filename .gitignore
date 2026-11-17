@@ -16,3 +16,6 @@ bin/
 
 # linux compiled
 a.out
+
+#MYSET
+.DS_Store
