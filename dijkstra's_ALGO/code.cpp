@@ -37,6 +37,11 @@ void dijkstra(int src , vector<vector<Edge>>& graph , int v)
         int u = x.second;
         int wt = x.first;
         
+        //This checks whether the shortest possible distance until node u. The weight is greater than that. 
+        //We just discard that because if we add that weight into it, we are going to have a much larger number. 
+        if(wt > dis[u])
+            continue;
+
         for(auto& e : graph[u])
         {
             if(dis[e.v] > dis[u]+e.wt)
