@@ -18,4 +18,4 @@ bin/
 a.out
 
 #MYSET
-.DS_Store
+*.DS_Store
